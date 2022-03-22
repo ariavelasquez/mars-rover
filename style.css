@@ -95,6 +95,24 @@ figcaption {
     padding: 5px 10px;
 }
 
+.collage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/**
+Getting all elements with the class "img" that are direct descendants of elements with the class "collage"
+*/
+
+.collage > .img {
+    flex-basis: calc(50% - 2.5px);
+}
+
+.collage > .img:nth-child(1),
+.collage > .img:nth-child(2) {
+   margin-bottom: 5px;
+}
 
 /*********************************************************************
   YOUR TABLET/DESKTOP STYLES GO HERE
