@@ -109,9 +109,50 @@ Getting all elements with the class "img" that are direct descendants of element
     flex-basis: calc(50% - 2.5px);
 }
 
-.collage > .img:nth-child(1),
+.collage > .img:nth-child(1), /** The comma is the 'OR' operator in CSS */
 .collage > .img:nth-child(2) {
    margin-bottom: 5px;
+}
+
+.dot {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.dot .inner,
+.dot .close {
+    display: none;
+}
+
+.pink {
+    background-color: #da8391a6;
+}
+
+.annotate {
+    position: relative;
+}
+
+#camera:not(.active) {
+    top: 20%;
+    left: 31%;
+}
+
+.dot.active {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.dot.active .inner,
+.dot.active .close {
+    display: block;
 }
 
 /*********************************************************************
